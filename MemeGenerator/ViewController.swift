@@ -14,10 +14,28 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
    
     @IBOutlet weak var cameraButton: UIBarButtonItem!
    
+    @IBOutlet weak var topTextfield: UITextField!
+    
+    @IBOutlet weak var bottomTextfield: UITextField!
+   
+   
+    // Textfield Delegate Objects
+    var toptextfield = TextfieldDelegate()
+    var bottomtextfield = TextfieldDelegate()
+
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
+    
+        topTextfield.delegate = toptextfield
+        bottomTextfield.delegate = bottomtextfield
+        
+       
+           }
     
     
     override func viewWillAppear(animated: Bool) {
@@ -26,7 +44,7 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
         
     
     
-      
+    
     
 
     
