@@ -18,6 +18,7 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
     
     @IBOutlet weak var bottomTextfield: UITextField!
    
+    @IBOutlet weak var shareButton: UIBarButtonItem!
    
     // Textfield Delegate Objects
     
@@ -46,6 +47,10 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
         subscribeToKeyboardNotifications()
         
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
+        
+        
+        //share button enabled/disabled
+        shareButton.enabled = (imagePickerView.image == nil) ? false : true
     }
     
 
@@ -53,6 +58,12 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         unsubscribeFromKeyboardNotifications()
+    }
+    
+    
+    // Hides battery , clock and carrier icons at the top
+    override func prefersStatusBarHidden() -> Bool {
+        return true;
     }
     
     
@@ -84,6 +95,8 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
         self.presentViewController(pickerController, animated: true, completion: nil)
     }
 
+    
+    //MARK:UIImagePickerControllerDelegate
     
     //get access to an image chosen from the Photo library or camera
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
@@ -117,12 +130,12 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
     
    //When the keyboardWillShow notification is received, shift the view's frame up
     func keyboardWillShow(notification: NSNotification) {
-        view.frame.origin.y -= getKeyboardHeight(notification)/2
+        view.frame.origin.y -= getKeyboardHeight(notification)
     }
     
     //When the keyboardWillHide notification is received, shift the view's frame down
     func keyboardWillHide(notification: NSNotification) {
-        view.frame.origin.y += getKeyboardHeight(notification)/2
+        view.frame.origin.y += getKeyboardHeight(notification)
     }
     
     
@@ -134,6 +147,18 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
         let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue // of CGRect
         return keyboardSize.CGRectValue().height
     }
+    
+    
+    
+    @IBAction func shareButtonPressed(sender: AnyObject) {
+   
+    
+    }
+    
+    
+    
+    
+    
     
     
     func generateMemedImage() -> UIImage {

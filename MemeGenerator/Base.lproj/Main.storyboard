@@ -20,7 +20,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G6w-DO-bbb">
                                 <rect key="frame" x="58" y="54" width="482" height="492"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5gu-OR-cLO">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gu-OR-cLO">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
                                     <barButtonItem title="Pick Image" id="sdN-6T-ErK">
@@ -37,7 +37,7 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m1d-h2-NbY">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m1d-h2-NbY">
                                 <rect key="frame" x="138" y="443" width="322" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="ABf-Ti-DDV"/>
@@ -46,7 +46,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TtC-FC-x5q">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TtC-FC-x5q">
                                 <rect key="frame" x="138" y="102" width="322" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="322" id="FED-WA-cLb"/>
@@ -56,25 +56,41 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
                             </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GE2-ga-Z9T">
+                                <rect key="frame" x="-1" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Share" id="Eye-0t-buv">
+                                        <connections>
+                                            <action selector="shareButtonPressed:" destination="BYZ-38-t0r" id="Av8-mt-rWG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5gu-OR-cLO" secondAttribute="trailing" id="2Vw-Ny-8YU"/>
                             <constraint firstItem="TtC-FC-x5q" firstAttribute="trailing" secondItem="m1d-h2-NbY" secondAttribute="trailing" id="3LI-YK-u2f"/>
                             <constraint firstItem="TtC-FC-x5q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="82" id="56Z-tO-N9s"/>
                             <constraint firstItem="TtC-FC-x5q" firstAttribute="centerX" secondItem="G6w-DO-bbb" secondAttribute="centerX" id="6Rd-Yn-wfk"/>
-                            <constraint firstItem="G6w-DO-bbb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="34" id="GUT-Jj-h4t"/>
+                            <constraint firstItem="GE2-ga-Z9T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="EPy-dh-hEe"/>
+                            <constraint firstItem="5gu-OR-cLO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FaY-M9-wwl"/>
+                            <constraint firstItem="G6w-DO-bbb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="54" id="GUT-Jj-h4t"/>
                             <constraint firstItem="G6w-DO-bbb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JyK-cx-BPn"/>
                             <constraint firstItem="TtC-FC-x5q" firstAttribute="leading" secondItem="m1d-h2-NbY" secondAttribute="leading" id="OXb-LH-d2u"/>
-                            <constraint firstItem="5gu-OR-cLO" firstAttribute="top" secondItem="m1d-h2-NbY" secondAttribute="bottom" constant="33" id="kQq-ba-niI"/>
-                            <constraint firstItem="5gu-OR-cLO" firstAttribute="top" secondItem="G6w-DO-bbb" secondAttribute="bottom" constant="10" id="lm0-u0-zel"/>
+                            <constraint firstItem="5gu-OR-cLO" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="bFI-Uc-s7O"/>
+                            <constraint firstItem="GE2-ga-Z9T" firstAttribute="centerX" secondItem="TtC-FC-x5q" secondAttribute="centerX" id="fa1-MP-iKB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="G6w-DO-bbb" secondAttribute="trailing" constant="40" id="plU-L5-hPf"/>
                             <constraint firstItem="G6w-DO-bbb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="qvK-Cz-8hi"/>
+                            <constraint firstItem="GE2-ga-Z9T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-21" id="wEy-WT-nCc"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="bottomTextfield" destination="m1d-h2-NbY" id="YOs-dO-lNM"/>
                         <outlet property="cameraButton" destination="tr7-gn-gyP" id="to3-Et-U33"/>
                         <outlet property="imagePickerView" destination="G6w-DO-bbb" id="9ua-27-CwL"/>
+                        <outlet property="shareButton" destination="Eye-0t-buv" id="yhl-oJ-Q4f"/>
                         <outlet property="topTextfield" destination="TtC-FC-x5q" id="Zei-CJ-lFp"/>
                     </connections>
                 </viewController>
