@@ -134,6 +134,32 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
         let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue // of CGRect
         return keyboardSize.CGRectValue().height
     }
+    
+    
+    func generateMemedImage() -> UIImage {
+        
+        // TODO: Hide toolbar and navbar
+        
+        // Render view to an image
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        self.view.drawViewHierarchyInRect(self.view.frame,
+            afterScreenUpdates: true)
+        let memedImage : UIImage =
+        UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        // TODO:  Show toolbar and navbar
+        
+        return memedImage
+    }
+    
+    func save() {
+        let memedImage = generateMemedImage()
+        //Create the meme
+        let meme = Meme(topText: topTextfield.text!,bottomText: bottomTextfield.text!,
+            originalImage: imagePickerView.image!, memedImage: memedImage)
+    }
+    
 
 }
 

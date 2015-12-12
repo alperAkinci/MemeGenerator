@@ -16,6 +16,7 @@
 		4E4A44911C188D26008BF2C6 /* MemeGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A44901C188D26008BF2C6 /* MemeGeneratorTests.swift */; };
 		4E4A449C1C188D26008BF2C6 /* MemeGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A449B1C188D26008BF2C6 /* MemeGeneratorUITests.swift */; };
 		4E4A44AA1C19A3C1008BF2C6 /* TextfieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A44A91C19A3C1008BF2C6 /* TextfieldDelegate.swift */; settings = {ASSET_TAGS = (); }; };
+		4E9AAC3F1C1C534A00CB42EB /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AAC3E1C1C534A00CB42EB /* Meme.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		4E4A449B1C188D26008BF2C6 /* MemeGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeGeneratorUITests.swift; sourceTree = "<group>"; };
 		4E4A449D1C188D26008BF2C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E4A44A91C19A3C1008BF2C6 /* TextfieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextfieldDelegate.swift; sourceTree = "<group>"; };
+		4E9AAC3E1C1C534A00CB42EB /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				4E4A44841C188D26008BF2C6 /* LaunchScreen.storyboard */,
 				4E4A44871C188D26008BF2C6 /* Info.plist */,
 				4E4A447F1C188D26008BF2C6 /* MemeGenerator.xcdatamodeld */,
+				4E9AAC3E1C1C534A00CB42EB /* Meme.swift */,
 			);
 			path = MemeGenerator;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				4E4A44811C188D26008BF2C6 /* MemeGenerator.xcdatamodeld in Sources */,
 				4E4A44AA1C19A3C1008BF2C6 /* TextfieldDelegate.swift in Sources */,
 				4E4A44791C188D26008BF2C6 /* AppDelegate.swift in Sources */,
+				4E9AAC3F1C1C534A00CB42EB /* Meme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +495,7 @@
 				4E4A44A21C188D26008BF2C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E4A44A31C188D26008BF2C6 /* Build configuration list for PBXNativeTarget "MemeGeneratorTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +504,7 @@
 				4E4A44A51C188D26008BF2C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E4A44A61C188D26008BF2C6 /* Build configuration list for PBXNativeTarget "MemeGeneratorUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +513,7 @@
 				4E4A44A81C188D26008BF2C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
