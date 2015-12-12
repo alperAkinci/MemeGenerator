@@ -130,17 +130,19 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
     
    //When the keyboardWillShow notification is received, shift the view's frame up
     func keyboardWillShow(notification: NSNotification) {
+        if bottomTextfield.isFirstResponder(){
         view.frame.origin.y -= getKeyboardHeight(notification)
-    }
+        }
+        }
     
     //When the keyboardWillHide notification is received, shift the view's frame down
     func keyboardWillHide(notification: NSNotification) {
+        if bottomTextfield.isFirstResponder(){
         view.frame.origin.y += getKeyboardHeight(notification)
+        }
     }
     
     
-    // Problem : it takes double size of keyboard thats why
-    // i divide by 2 in upper functions
     
     func getKeyboardHeight(notification: NSNotification) -> CGFloat {
         let userInfo = notification.userInfo
@@ -149,16 +151,23 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
     }
     
     
+    //MARK: Share Button Pressed
     
     @IBAction func shareButtonPressed(sender: AnyObject) {
    
-    
+        let memedImage = generateMemedImage()
+        //let string = "Alper"
+        let nextController = UIActivityViewController(activityItems: [memedImage] , applicationActivities: nil )
+        
+        
+      nextController.completionWithItemsHandler = {(s: String?, ok: Bool, items: [AnyObject]?, err:NSError?) -> Void in
+            self.save()
+            //self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+        self.presentViewController(nextController, animated: true, completion: nil)
     }
-    
-    
-    
-    
-    
+
     
     
     func generateMemedImage() -> UIImage {

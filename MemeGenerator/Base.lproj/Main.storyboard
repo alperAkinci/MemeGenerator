@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -37,20 +38,10 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m1d-h2-NbY">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m1d-h2-NbY">
                                 <rect key="frame" x="138" y="443" width="322" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="ABf-Ti-DDV"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="40"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TtC-FC-x5q">
-                                <rect key="frame" x="138" y="102" width="322" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="322" id="FED-WA-cLb"/>
-                                    <constraint firstAttribute="height" constant="80" id="NsS-fq-gTE"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="40"/>
@@ -66,22 +57,33 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TtC-FC-x5q">
+                                <rect key="frame" x="138" y="102" width="322" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="322" id="wP8-8y-qfg"/>
+                                    <constraint firstAttribute="height" constant="80" id="wSM-uM-IwA"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="5gu-OR-cLO" secondAttribute="trailing" id="2Vw-Ny-8YU"/>
-                            <constraint firstItem="TtC-FC-x5q" firstAttribute="trailing" secondItem="m1d-h2-NbY" secondAttribute="trailing" id="3LI-YK-u2f"/>
-                            <constraint firstItem="TtC-FC-x5q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="82" id="56Z-tO-N9s"/>
-                            <constraint firstItem="TtC-FC-x5q" firstAttribute="centerX" secondItem="G6w-DO-bbb" secondAttribute="centerX" id="6Rd-Yn-wfk"/>
+                            <constraint firstItem="TtC-FC-x5q" firstAttribute="top" secondItem="GE2-ga-Z9T" secondAttribute="bottom" constant="58" id="7Kf-al-Klf"/>
                             <constraint firstItem="GE2-ga-Z9T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="EPy-dh-hEe"/>
                             <constraint firstItem="5gu-OR-cLO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FaY-M9-wwl"/>
                             <constraint firstItem="G6w-DO-bbb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="54" id="GUT-Jj-h4t"/>
+                            <constraint firstItem="TtC-FC-x5q" firstAttribute="trailing" secondItem="m1d-h2-NbY" secondAttribute="trailing" id="HG0-kB-YEN"/>
+                            <constraint firstItem="TtC-FC-x5q" firstAttribute="centerX" secondItem="GE2-ga-Z9T" secondAttribute="centerX" id="HpH-c8-XSQ"/>
+                            <constraint firstItem="5gu-OR-cLO" firstAttribute="top" secondItem="m1d-h2-NbY" secondAttribute="bottom" constant="33" id="I4P-rt-zIT"/>
                             <constraint firstItem="G6w-DO-bbb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JyK-cx-BPn"/>
-                            <constraint firstItem="TtC-FC-x5q" firstAttribute="leading" secondItem="m1d-h2-NbY" secondAttribute="leading" id="OXb-LH-d2u"/>
                             <constraint firstItem="5gu-OR-cLO" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="bFI-Uc-s7O"/>
-                            <constraint firstItem="GE2-ga-Z9T" firstAttribute="centerX" secondItem="TtC-FC-x5q" secondAttribute="centerX" id="fa1-MP-iKB"/>
+                            <constraint firstItem="TtC-FC-x5q" firstAttribute="centerX" secondItem="G6w-DO-bbb" secondAttribute="centerX" id="cD4-Zc-VmL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="G6w-DO-bbb" secondAttribute="trailing" constant="40" id="plU-L5-hPf"/>
                             <constraint firstItem="G6w-DO-bbb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="qvK-Cz-8hi"/>
+                            <constraint firstItem="TtC-FC-x5q" firstAttribute="leading" secondItem="m1d-h2-NbY" secondAttribute="leading" id="rXp-oa-ia3"/>
                             <constraint firstItem="GE2-ga-Z9T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-21" id="wEy-WT-nCc"/>
                         </constraints>
                     </view>
