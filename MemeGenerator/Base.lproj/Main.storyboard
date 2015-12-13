@@ -90,10 +90,12 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="bottomTextfield" destination="m1d-h2-NbY" id="YOs-dO-lNM"/>
+                        <outlet property="bottomToolbar" destination="5gu-OR-cLO" id="en2-cm-xC7"/>
                         <outlet property="cameraButton" destination="tr7-gn-gyP" id="to3-Et-U33"/>
                         <outlet property="imagePickerView" destination="G6w-DO-bbb" id="9ua-27-CwL"/>
                         <outlet property="shareButton" destination="Eye-0t-buv" id="yhl-oJ-Q4f"/>
                         <outlet property="topTextfield" destination="TtC-FC-x5q" id="Zei-CJ-lFp"/>
+                        <outlet property="topToolbar" destination="GE2-ga-Z9T" id="AM1-5f-b1w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

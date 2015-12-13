@@ -20,6 +20,8 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
    
     @IBOutlet weak var shareButton: UIBarButtonItem!
    
+    @IBOutlet weak var topToolbar: UIToolbar!
+    @IBOutlet weak var bottomToolbar: UIToolbar!
     // Textfield Delegate Objects
     
     var toptextfield = TextfieldDelegate()
@@ -51,6 +53,9 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
         
         //share button enabled/disabled
         shareButton.enabled = (imagePickerView.image == nil) ? false : true
+        
+        
+
     }
     
 
@@ -154,7 +159,7 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
     //MARK: Share Button Pressed
     
     @IBAction func shareButtonPressed(sender: AnyObject) {
-   
+        
         let memedImage = generateMemedImage()
         //let string = "Alper"
         let nextController = UIActivityViewController(activityItems: [memedImage] , applicationActivities: nil )
@@ -172,7 +177,9 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
     
     func generateMemedImage() -> UIImage {
         
-        // TODO: Hide toolbar and navbar
+        // Hide toolbar and navbar
+        self.topToolbar.hidden = true
+        self.bottomToolbar.hidden = true
         
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -182,7 +189,9 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
         UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        // TODO:  Show toolbar and navbar
+        // Show toolbar and navbar
+        self.topToolbar.hidden = false
+        self.bottomToolbar.hidden = false
         
         return memedImage
     }
