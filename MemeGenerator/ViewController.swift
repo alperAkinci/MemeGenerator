@@ -22,14 +22,12 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
    
     @IBOutlet weak var topToolbar: UIToolbar!
     @IBOutlet weak var bottomToolbar: UIToolbar!
+    
     // Textfield Delegate Objects
     
     var toptextfield = TextfieldDelegate()
     var bottomtextfield = TextfieldDelegate()
 
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -201,6 +199,11 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
         //Create the meme
         let meme = Meme(topText: topTextfield.text!,bottomText: bottomTextfield.text!,
             originalImage: imagePickerView.image!, memedImage: memedImage)
+        
+        // Add it to the memes array in the Application Delegate
+        let object = UIApplication.sharedApplication().delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
     }
     
 
