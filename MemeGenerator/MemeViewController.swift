@@ -164,7 +164,7 @@ class MemeViewController: UIViewController , UIImagePickerControllerDelegate, UI
         
         
       nextController.completionWithItemsHandler = {(s: String?, ok: Bool, items: [AnyObject]?, err:NSError?) -> Void in
-            self.save()
+            self.save(memedImage)
             //self.dismissViewControllerAnimated(true, completion: nil)
         }
         
@@ -194,8 +194,8 @@ class MemeViewController: UIViewController , UIImagePickerControllerDelegate, UI
         return memedImage
     }
     
-    func save() {
-        let memedImage = generateMemedImage()
+    func save(memedImage : UIImage) {
+        
         //Create the meme
         let meme = Meme(topText: topTextfield.text!,bottomText: bottomTextfield.text!,
             originalImage: imagePickerView.image!, memedImage: memedImage)
