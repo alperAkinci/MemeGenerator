@@ -131,6 +131,9 @@
                         </cells>
                     </collectionView>
                     <navigationItem key="navigationItem" id="OOv-pY-WLP"/>
+                    <connections>
+                        <outlet property="flowLayout" destination="NxH-Ns-GRq" id="bAv-9X-pW6"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a08-0y-gEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

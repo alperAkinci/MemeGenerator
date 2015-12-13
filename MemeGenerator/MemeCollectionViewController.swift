@@ -13,10 +13,21 @@ import UIKit
 
 class MemeCollectionViewController : UIViewController ,UICollectionViewDataSource {
     
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    
+    //MARK:Properties
     var memes: [Meme] {
         return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
     }
+
     
+    override func viewDidLoad() {
+        
+        flowLayoutSettings()
+    }
+    
+    
+    //MARK: Data Source Methods
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return self.memes.count
@@ -32,6 +43,18 @@ class MemeCollectionViewController : UIViewController ,UICollectionViewDataSourc
         
         return cell
         
+    }
+    
+    //MARK:Layout Stuff
+    func flowLayoutSettings() {
+        
+        let space: CGFloat = 3.0
+        let dimension = (self.view.frame.size.width - (2 * space)) / 3.0
+        
+        flowLayout.minimumInteritemSpacing = space
+        flowLayout.itemSize = CGSizeMake(dimension, dimension)
+    
+    
     }
     
     
