@@ -10,6 +10,7 @@ import UIKit
 
 class MemeViewController: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
+//MARK: - Outlets
     @IBOutlet weak var imagePickerView: UIImageView!
    
     @IBOutlet weak var cameraButton: UIBarButtonItem!
@@ -28,7 +29,7 @@ class MemeViewController: UIViewController , UIImagePickerControllerDelegate, UI
     var toptextfield = TextfieldDelegate()
     var bottomtextfield = TextfieldDelegate()
 
-    
+//MARK: - View Controller Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -198,6 +199,7 @@ class MemeViewController: UIViewController , UIImagePickerControllerDelegate, UI
         return memedImage
     }
     
+
     func save() {
         
         //Create the meme
