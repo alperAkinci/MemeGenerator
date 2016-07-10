@@ -11,7 +11,8 @@ import UIKit
 
 class Meme {
     
-    //My Modal
+    // I am from Meme Table Branch
+    
     
     //Properties
     var topText : String?
