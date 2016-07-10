@@ -13,6 +13,7 @@ class Meme {
     
     //My Modal
     // Here Im from develop branch
+    // I am from Meme Branch
     //Properties
     var topText : String?
     var bottomText : String?
