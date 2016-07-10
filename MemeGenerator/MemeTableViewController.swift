@@ -9,8 +9,6 @@
 import Foundation
 import UIKit
 
-
-// hello Im table Meme Branch
 class MemeTableViewController : UIViewController ,UITableViewDelegate ,UITableViewDataSource  {
     
     var memes: [Meme] {
