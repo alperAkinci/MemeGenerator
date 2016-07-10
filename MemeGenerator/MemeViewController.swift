@@ -120,9 +120,9 @@ class MemeViewController: UIViewController , UIImagePickerControllerDelegate, UI
     
    //Sign up to be notified when the keyboard appears
     func subscribeToKeyboardNotifications() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:"    , name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MemeViewController.keyboardWillShow(_:))    , name: UIKeyboardWillShowNotification, object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:"    , name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MemeViewController.keyboardWillHide(_:))    , name: UIKeyboardWillHideNotification, object: nil)
     }
     
     //Sign up to be notified when the keyboard disappears
