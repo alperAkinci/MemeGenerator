@@ -11,6 +11,7 @@ import UIKit
 
 class Meme {
     
+    // I am from Meme Branch
     //Properties
     var topText : String?
     var bottomText : String?
