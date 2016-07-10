@@ -11,6 +11,8 @@ import UIKit
 
 class Meme {
     
+    //My Modal
+    
     //Properties
     var topText : String?
     var bottomText : String?
