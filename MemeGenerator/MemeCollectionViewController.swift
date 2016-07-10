@@ -11,29 +11,33 @@ import Foundation
 import UIKit
 
 
-class MemeCollectionViewController : UIViewController ,UICollectionViewDataSource {
+class MemeCollectionViewController : UICollectionViewController {
     
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     //MARK:Properties
-    var memes: [Meme] {
-        return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
-    }
-
+    var memes :[Meme]!
+    
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        
+        memes = applicationDelegate.memes
         
         flowLayoutSettings()
     }
     
     
+    
     //MARK: Data Source Methods
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return self.memes.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("MemeCollectionViewCell", forIndexPath: indexPath) as! MemeCollectionViewCell
         

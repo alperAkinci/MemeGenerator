@@ -42,7 +42,7 @@ class MemeViewController: UIViewController , UIImagePickerControllerDelegate, UI
     
     override func viewWillAppear(animated: Bool) {
         
-        super.viewWillAppear(animated)
+        super.viewWillAppear(true)
         
         subscribeToKeyboardNotifications()
         
@@ -70,6 +70,10 @@ class MemeViewController: UIViewController , UIImagePickerControllerDelegate, UI
     }
     
     
+    @IBAction func cancelBtnPresssed(sender: AnyObject) {
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     
     //MARK:Image Picking Stuff
@@ -164,8 +168,8 @@ class MemeViewController: UIViewController , UIImagePickerControllerDelegate, UI
         
         
       nextController.completionWithItemsHandler = {(s: String?, ok: Bool, items: [AnyObject]?, err:NSError?) -> Void in
-            self.save(memedImage)
-            //self.dismissViewControllerAnimated(true, completion: nil)
+            self.save()
+            self.dismissViewControllerAnimated(true, completion: nil)
         }
         
         self.presentViewController(nextController, animated: true, completion: nil)
@@ -194,11 +198,11 @@ class MemeViewController: UIViewController , UIImagePickerControllerDelegate, UI
         return memedImage
     }
     
-    func save(memedImage : UIImage) {
+    func save() {
         
         //Create the meme
         let meme = Meme(topText: topTextfield.text!,bottomText: bottomTextfield.text!,
-            originalImage: imagePickerView.image!, memedImage: memedImage)
+            originalImage: imagePickerView.image!, memedImage: generateMemedImage())
         
         // Add it to the memes array in the Application Delegate
         let object = UIApplication.sharedApplication().delegate

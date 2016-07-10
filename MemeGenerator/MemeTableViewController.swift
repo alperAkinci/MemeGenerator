@@ -11,16 +11,17 @@ import UIKit
 
 class MemeTableViewController : UIViewController ,UITableViewDelegate ,UITableViewDataSource  {
     
-    var memes :[Meme]!
-    
+    var memes: [Meme] {
+        return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         
-        memes = applicationDelegate.memes
     }
+    
+    
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
