@@ -12,7 +12,7 @@ import UIKit
 class Meme {
     
     //My Modal
-    //Hello Im meme branch
+    
     //Properties
     var topText : String?
     var bottomText : String?
